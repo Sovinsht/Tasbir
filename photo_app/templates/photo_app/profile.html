@@ -11,7 +11,8 @@ Tasbir
 
 
 {% for up in upload %}
-
+    <img src="{{user.photo.url}}" alt="profile_pic">
+    <h1>{{user.bio}}</h1>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
@@ -173,20 +174,20 @@ Tasbir
             <div class="social-avatar">
                     <a href="">
                     <img alt="image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-                    <!-- <img src="{{user.photo.url}}" alt="profile_pic"> -->
                 </a>
             </div>
     
-            <div class="social-feed-box">
+            <!-- <div class="social-feed-box">
                 <div class="pull-right social-action dropdown">
                     <button data-toggle="dropdown" class="dropdown-toggle btn-white">
                         <i class="fa fa-angle-down"></i>
                     </button>
                     <ul class="dropdown-menu m-t-xs">
                         <li><a href="{% url 'photo_app:edit' up.id %}">Edit Post</a></li>
-                        <li><a href="{% url 'photo_app:edit1' up.id %}">Edit Comment</a></li> 
+                        <li><a href="{% url 'photo_app:edit1' up.id %}">Edit Comment</a></li>
+                        <li><a href="{% url 'photo_app:delete' up.id %}">Delete</a></li>
                     </ul>
-                </div>
+                </div>  -->
                 <div class="social-avatar">
                     <a href="#">
                         {{up.user}}

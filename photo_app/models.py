@@ -14,5 +14,5 @@ class PhotoModel(models.Model):
 class CommentModel(models.Model):
     Comment = models.TextField()
     comment_by = models.ForeignKey(UserModel, on_delete=models.CASCADE)
-    parentpost = models.ForeignKey(PhotoModel, on_delete=models.CASCADE)
+    parentpost = models.ForeignKey(PhotoModel, on_delete=models.CASCADE, related_name='comments')
     timestamp1 = models.DateTimeField(auto_now=True)
